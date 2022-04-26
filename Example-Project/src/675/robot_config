@@ -1,0 +1,5 @@
+#include "main.h"
+
+pros::Motor claw(port, MOTOR_GEARSET_18, true, MOTOR_ENCODER_DEGREES);
+pros::Motor lift(port, MOTOR_GEARSET_18t, true, MOTOR_ENCODER_DEGREES);
+pros::Motor lift2(port, MOTOR_GEARSET_18t, false, MOTOR_ENCODER_DEGREES);
