@@ -2,6 +2,8 @@
 
 void op_control(){
     useClaw();
+    useLift();
+    useMogo();
 }
 void useClaw(){
     if(master.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP))
@@ -32,5 +34,20 @@ void useLift()
     else{
         lift.move_velocity(0);
         lift2.move_velocity(0);
+    }
+}
+
+void useMogo()
+{
+    if(master.get_digital(pros::E_CONTROLLER_DIGITAL_L1))
+    {
+        mogo.move_velocity(velocity);
+    }
+    else if(master.get_digital(pros::E_CONTROLLER_DIGITAL_L2))
+    {
+        mogo.move_velocity(velocity);
+    }
+    else{
+        mogo.move_velocity(0);
     }
 }
